@@ -1,0 +1,189 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.clear-both {
+    clear: both;
+}
+.clear-left {
+    clear: left;
+}
+.clear-right {
+    clear: right;
+}
+.margin-top {
+    margin-top: 20px;
+}
+.thumbnail {
+    box-sizing: border-box;
+    padding: 10px;
+}
+.btn-info {
+    background-color: #6392c6;
+    border-color: #6392c6;
+}
+.btn-info:hover {
+    background-color: #588ac2;
+    border-color: #588ac2;
+}
+.header-wrapper {
+    display: block;
+    background-color: #6392c6;
+}
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #6392c6;
+    border: none 0;
+}
+.navbar-brand {
+    color: #ffffff !important;
+}
+.navbar-nav li a {
+    color: #e3edf4 !important;
+}
+.navbar-nav li a:hover {
+    color: #ffffff !important;
+}
+.navbar-small .brand a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 15px 0 15px 0;
+}
+.navbar-small select {
+    padding: 5px 40px 5px 40px;
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+.search-wrapper {
+    display: block;
+    background: #353b65 url("../img/search-bg.jpg") center top no-repeat;
+    background-size: 100% 100%;
+    padding: 50px 0 50px 0;
+}
+.search-wrapper .title {
+    color: #ffffff;
+    font-size: 40px;
+    margin: 0 0 20px 0;
+}
+.search-form .form-control {
+    width: 85%;
+    font-size: 14px;
+    padding: 24px;
+    border-radius: 0;
+    border: none 0;
+}
+.search-form .btn {
+    width: 13%;
+    margin: 0 0 0 2%;
+    font-size: 14px;
+    padding: 14px;
+    border-radius: 0;
+    border: none 0;
+    background-color: #6392c6;
+    font-weight: bold;
+    color: #ffffff;
+}
+.search-form .btn:hover {
+    background-color: #588ac2;
+}
+@media screen and (max-width: 500px) {
+    .search-wrapper .title {
+        font-size: 30px;
+    }
+    .search-form .form-control {
+        width: 70%;
+    }
+    .search-form .btn {
+        width: 25%;
+        margin: 0 0 0 5%;
+    }
+}
+@media screen and (min-width:500px) and (max-width: 800px) {
+    .search-wrapper .title {
+        font-size: 28px;
+    }
+    .search-form .form-control {
+        width: 80%;
+    }
+    .search-form .btn {
+        width: 15%;
+        margin: 0 0 0 5%;
+    }
+}
+#content {
+    box-sizing: border-box;
+    padding: 40px 10px 40px 10px;
+}
+.curs-item {
+    display: block;
+    margin: 10px 0 10px 0;
+}
+.curs-item i {
+    float: left;
+    margin-right: 5px;
+    font-size: 23px;
+}
+.curs-item .title {
+    display: block;
+    color: #000000;
+    font-size: 18px;
+}
+.curs-item .title a{
+    color: #000000;
+    font-size: 18px;
+}
+.curs-item .description {
+    display: block;
+    clear: both;
+    margin-top: 15px;
+}
+table.profs {
+    margin-top: 10px;
+}
+#sidebar {
+    box-sizing: border-box;
+    padding: 40px 10px 40px 10px;
+}
+.login-box {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.login-box .checkbox {
+    margin-top: 0;
+}
+footer {
+    background: url("../img/footer-bg.png") repeat;
+    color: #c8c8c8;
+    padding: 40px 0 20px 0;
+}
+footer .col-sm-3 {
+    display: block;
+    margin-bottom: 20px;
+}
+footer h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+footer a {
+    color: #c8c8c8;
+}
+footer a:hover {
+    color: #828282;
+    text-decoration: none;
+}

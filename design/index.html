@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- Jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- Font Awesome -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Application -->
+        <link rel="stylesheet" href="css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
+    <title>MudalPlus</title>
+</head>
+<body>
+<div class="header-wrapper">
+    <!-- Navbar for xs & sm screens -->
+    <div class="container navbar-small hidden-md hidden-lg">
+        <div class="row">
+            <div class="col-xs-12 brand text-center">
+                <a href="#">MudălPlus</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <select name="navigation-small" onchange="location = this.options[this.selectedIndex].value;">
+                    <option value="#">Mergi la pagina...</option>
+                    <option value="#">Home</option>
+                    <option value="#">Cursuri</option>
+                    <option value="#">Profesori</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar for md & lg screens -->
+    <div class="container hidden-xs hidden-sm">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">MudălPlus</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Cursuri</a></li>
+                        <li><a href="#">Profesori</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+</div>
+<div class="search-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h2 class="title">Cauta un curs / profesor</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <form class="search-form">
+                    <input class="form-control float-left" type="text" name="search" placeholder="Scrie aici numele cursului / profesorului" autocomplete="off">
+                    <button type="submit" class="btn btn-default float-left">Cauta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div id="content" class="col-md-9">
+            <div class="row">
+                <h2 class="col-xs-12">Cursuri</h2>
+                <p class="col-xs-12">Pentru a vizualiza lista cu toate cursurile, mergeti la pagina <a href="#">cursuri</a>.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="curs-item thumbnail">
+                        <div class="title">
+                            <a href="#"><i class="fa fa-file-text-o"></i>Metode de dezvoltare software</a>
+                        </div> <!-- ./title -->
+                        <div class="description">
+                            <p><b>Profesor(i)</b>: <a href="#">Ionescu Bobo</a>, <a href="#">Patrascu Mirel</a></p>
+                            <div class="ratings">
+                                <div class="pull-right">6 ratings</div>
+                                <div>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </div>
+                            </div> <!-- ./ratings -->
+                        </div> <!-- ./description -->
+                    </div> <!-- ./curs-item thumbnail -->
+                </div> <!-- ./col-xs-12 col-sm-4 -->
+                <div class="col-xs-12 col-sm-4">
+                    <div class="curs-item thumbnail">
+                        <div class="title">
+                            <a href="#"><i class="fa fa-file-text-o"></i>Programare avansata pe obiecte</a>
+                        </div> <!-- ./title -->
+                        <div class="description">
+                            <p><b>Profesor(i)</b>: <a href="#">Ionescu Bobo</a>, <a href="#">Patrascu Mirel</a></p>
+                            <div class="ratings">
+                                <div class="pull-right">3 ratings</div>
+                                <div>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </div>
+                            </div> <!-- ./ratings -->
+                        </div> <!-- ./description -->
+                    </div> <!-- ./curs-item thumbnail -->
+                </div> <!-- ./col-xs-12 col-sm-4 -->
+                <div class="col-xs-12 col-sm-4">
+                    <div class="curs-item thumbnail">
+                        <div class="title">
+                            <a href="#"><i class="fa fa-file-text-o"></i>Algebra II</a>
+                        </div> <!-- ./title -->
+                        <div class="description">
+                            <p><b>Profesor(i)</b>: <a href="#">Ionescu Bobo</a></p>
+                            <div class="ratings">
+                                <div class="pull-right">10 ratings</div>
+                                <div>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </div>
+                            </div> <!-- ./ratings -->
+                        </div> <!-- ./description -->
+                    </div> <!-- ./curs-item thumbnail -->
+                </div> <!-- ./col-xs-12 col-sm-4 -->
+            </div> <!-- ./row -->
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="curs-item thumbnail">
+                        <div class="title">
+                            <a href="#"><i class="fa fa-file-text-o"></i>Geometrie computationala</a>
+                        </div> <!-- ./title -->
+                        <div class="description">
+                            <p><b>Profesor(i)</b>: <a href="#">Ionescu Bobo</a>, <a href="#">Patrascu Mirel</a></p>
+                            <div class="ratings">
+                                <div class="pull-right">6 ratings</div>
+                                <div>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </div>
+                            </div> <!-- ./ratings -->
+                        </div> <!-- ./description -->
+                    </div> <!-- ./curs-item thumbnail -->
+                </div> <!-- ./col-xs-12 col-sm-4 -->
+                <div class="col-xs-12 col-sm-4">
+                    <div class="curs-item thumbnail">
+                        <div class="title">
+                            <a href="#"><i class="fa fa-file-text-o"></i>Logica matematica</a>
+                        </div> <!-- ./title -->
+                        <div class="description">
+                            <p><b>Profesor(i)</b>: <a href="#">Ionescu Bobo</a>, <a href="#">Patrascu Mirel</a></p>
+                            <div class="ratings">
+                                <div class="pull-right">3 ratings</div>
+                                <div>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </div>
+                            </div> <!-- ./ratings -->
+                        </div> <!-- ./description -->
+                    </div> <!-- ./curs-item thumbnail -->
+                </div> <!-- ./col-xs-12 col-sm-4 -->
+                <div class="col-xs-12 col-sm-4">
+                    <div class="curs-item thumbnail">
+                        <div class="title">
+                            <a href="#"><i class="fa fa-file-text-o"></i>Programare avansata obiect</a>
+                        </div> <!-- ./title -->
+                        <div class="description">
+                            <p><b>Profesor(i)</b>: <a href="#">Ionescu Bobo</a></p>
+                            <div class="ratings">
+                                <div class="pull-right">10 ratings</div>
+                                <div>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </div>
+                            </div> <!-- ./ratings -->
+                        </div> <!-- ./description -->
+                    </div> <!-- ./curs-item thumbnail -->
+                </div> <!-- ./col-xs-12 col-sm-4 -->
+            </div> <!-- ./row -->
+
+            <div class="row margin-top">
+                <h2 class="col-xs-12">Profesori</h2>
+                <p class="col-xs-12">Pentru a vizualiza lista cu toti profesorii, mergeti la pagina <a href="#">profesori</a>.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <table class="profs table table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th data-field="id">#</th>
+                                <th data-field="name">Nume</th>
+                                <th data-field="lectures">Cursuri</th>
+                                <th data-field="rating">Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Popescu Vlad</td>
+                                <td>Programare logica, Curs 2, Curs 3</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Popescu Vlad</td>
+                                <td>Programare logica, Curs 2, Curs 3</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Popescu Vlad</td>
+                                <td>Programare logica, Curs 2, Curs 3</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Popescu Vlad</td>
+                                <td>Programare logica, Curs 2, Curs 3</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>etc</td>
+                                <td>etc</td>
+                                <td>etc</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> <!-- ./table-responsive -->
+            </div> <!-- ./row -->
+        </div> <!-- ./content -->
+
+        <div id="sidebar" class="col-xs-12 col-md-3">
+            <div class="row">
+                <h3 class="col-xs-12">Login</h3>
+            </div>
+            <div class="login-box row">
+                <form>
+                    <div class="form-group col-xs-12">
+                        <label for="email">Adresa de e-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="E-mail...">
+                    </div>
+                    <div class="form-group col-xs-12">
+                        <label for="password">Parola</label>
+                        <input type="password" class="form-control" id="password" placeholder="Parola...">
+                    </div>
+                    <div class="checkbox col-xs-12">
+                        <label>
+                            <input type="checkbox"> Tine-ma minte!
+                        </label>
+                    </div>
+                    <div class="form-group col-xs-12">
+                        <button type="submit" class="btn btn-default">Login</button>
+                        <a href="#" class="btn btn-info">Inregistrare</a>
+                    </div>
+                </form>
+            </div> <!-- ./row -->
+        </div> <!-- ./sidebar -->
+    </div> <!-- ./row -->
+</div> <!-- ./container -->
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h3>Despre proiect</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="col-sm-3">
+                <h3>Realizatori</h3>
+                <ul>
+                    <li><a href="#" target="_blank">Palcuie Alexandru</a></li>
+                    <li><a href="http://www.octavianbelu.ro" target="_blank">Belu Octavian</a></li>
+                    <li><a href="#" target="_blank">Cucu Alexandru</a></li>
+                    <li><a href="#" target="_blank">Stanescu Leonard</a></li>
+                    <li><a href="#" target="_blank">Bungiu Alexandru</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h3>Limbaje / tehnologii folosite</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>Html</li>
+                    <li>CSS</li>
+                    <li>Django</li>
+                    <li>Bootstrap</li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h3>Contact</h3>
+                <ul>
+                    <li>office@mudalplus.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
