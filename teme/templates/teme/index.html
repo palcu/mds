@@ -1,63 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <!-- Jquery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <!-- Font Awesome -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <!-- Application -->
-        <link rel="stylesheet" href="css/style.css">
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
-    <title>MudalPlus</title>
-</head>
-<body>
-<div class="header-wrapper">
-    <!-- Navbar for xs & sm screens -->
-    <div class="container navbar-small hidden-md hidden-lg">
-        <div class="row">
-            <div class="col-xs-12 brand text-center">
-                <a href="#">MudălPlus</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 text-center">
-                <select name="navigation-small" onchange="location = this.options[this.selectedIndex].value;">
-                    <option value="#">Mergi la pagina...</option>
-                    <option value="#">Home</option>
-                    <option value="#">Cursuri</option>
-                    <option value="#">Profesori</option>
-                </select>
-            </div>
-        </div>
-    </div>
-    <!-- Navbar for md & lg screens -->
-    <div class="container hidden-xs hidden-sm">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">MudălPlus</a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Cursuri</a></li>
-                        <li><a href="#">Profesori</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-    </div>
-</div>
+{% extends 'teme/base.html' %}
+
+{% block content %}
 <div class="search-wrapper">
     <div class="container">
         <div class="row">
@@ -320,43 +263,4 @@
         </div> <!-- ./sidebar -->
     </div> <!-- ./row -->
 </div> <!-- ./container -->
-
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h3>Despre proiect</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-            </div>
-            <div class="col-sm-3">
-                <h3>Realizatori</h3>
-                <ul>
-                    <li><a href="#" target="_blank">Palcuie Alexandru</a></li>
-                    <li><a href="http://www.octavianbelu.ro" target="_blank">Belu Octavian</a></li>
-                    <li><a href="#" target="_blank">Cucu Alexandru</a></li>
-                    <li><a href="#" target="_blank">Stanescu Leonard</a></li>
-                    <li><a href="#" target="_blank">Bungiu Alexandru</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-3">
-                <h3>Limbaje / tehnologii folosite</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>Html</li>
-                    <li>CSS</li>
-                    <li>Django</li>
-                    <li>Bootstrap</li>
-                </ul>
-            </div>
-            <div class="col-sm-3">
-                <h3>Contact</h3>
-                <ul>
-                    <li>office@mudalplus.com</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
-</body>
-</html>
+{% endblock %}
