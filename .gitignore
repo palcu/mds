@@ -61,3 +61,6 @@ db.sqlite3
 
 # Remove local settings
 proiectmds/local_settings.py
+
+# Shit
+staticfiles/
