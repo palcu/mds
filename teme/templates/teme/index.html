@@ -1,4 +1,5 @@
 {% extends 'teme/base.html' %}
+{% load teme_extras %}
 
 {% block content %}
 <div class="search-wrapper">
@@ -36,13 +37,7 @@
                             <p><b>Profesor(i)</b>: <a href="#">Ionescu Bobo</a>, <a href="#">Patrascu Mirel</a></p>
                             <div class="ratings">
                                 <div class="pull-right">6 ratings</div>
-                                <div>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </div>
+                                <div>{% get_stars 5 %}</div>
                             </div> <!-- ./ratings -->
                         </div> <!-- ./description -->
                     </div> <!-- ./curs-item thumbnail -->
@@ -169,6 +164,14 @@
                             </tr>
                         </thead>
                         <tbody>
+                        {% for teacher in teachers %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ teacher.name }}</td>
+                                <td>{{ teacher.courses }}</td>
+                                <td>{% get_stars 5 %}</td>
+                            </tr>
+                        {% endfor %}
                             <tr>
                                 <td>1</td>
                                 <td>Popescu Vlad</td>
