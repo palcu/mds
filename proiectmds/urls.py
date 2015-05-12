@@ -6,6 +6,5 @@ from . import settings
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^static/(?P.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+    url(r'^admin/', include(admin.site.urls))
 ]
