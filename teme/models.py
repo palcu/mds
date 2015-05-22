@@ -29,4 +29,4 @@ class Rating(models.Model):
     course = models.ForeignKey(Course)
 
     def __str__(self):
-        return self.course.name + ' - ' + self.grade
+        return self.course.name + ' - ' + str(self.grade)
