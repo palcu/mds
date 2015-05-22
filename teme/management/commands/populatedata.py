@@ -14,3 +14,4 @@ class Command(BaseCommand):
             c = Course(name=courses[i], teacher=t)
             c.save()
             r = Rating(grade=random.randint(0, 4), course=c)
+            r.save()
