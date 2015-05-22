@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-from .models import Material, Teacher
+from .models import Course, Teacher
 
 
 def index(request):
@@ -15,6 +15,6 @@ def index(request):
         teachers.append(teacher_context)
 
     return render(request, 'teme/index.html', {
-        'materials': Material.objects.all(),
+        'courses': Course.objects.all(),
         'teachers': teachers,
     })
