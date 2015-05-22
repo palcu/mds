@@ -28,124 +28,23 @@
             </div>
 
             <div class="row">
+                {% for course in courses %}
                 <div class="col-xs-12 col-sm-4">
                     <div class="curs-item thumbnail">
                         <div class="title">
-                            <a href="#"><i class="fa fa-file-text-o"></i>Metode de dezvoltare software</a>
+                            <a href="#"><i class="fa fa-file-text-o"></i>{{ course.name }}</a>
                         </div> <!-- ./title -->
                         <div class="description">
-                            <p><b>Profesor(i)</b>: <a href="#">Ionescu Bobo</a>, <a href="#">Patrascu Mirel</a></p>
+                            <p><b>Profesor</b>: {{ course.teacher }}</p>
                             <div class="ratings">
-                                <div class="pull-right">6 ratings</div>
-                                <div>{% get_stars 5 %}</div>
+                                <div class="pull-right">{{ course.rating_count }} ratings</div>
+                                {% get_stars course.rating %}
                             </div> <!-- ./ratings -->
                         </div> <!-- ./description -->
                     </div> <!-- ./curs-item thumbnail -->
                 </div> <!-- ./col-xs-12 col-sm-4 -->
-                <div class="col-xs-12 col-sm-4">
-                    <div class="curs-item thumbnail">
-                        <div class="title">
-                            <a href="#"><i class="fa fa-file-text-o"></i>Programare avansata pe obiecte</a>
-                        </div> <!-- ./title -->
-                        <div class="description">
-                            <p><b>Profesor(i)</b>: <a href="#">Ionescu Bobo</a>, <a href="#">Patrascu Mirel</a></p>
-                            <div class="ratings">
-                                <div class="pull-right">3 ratings</div>
-                                <div>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </div>
-                            </div> <!-- ./ratings -->
-                        </div> <!-- ./description -->
-                    </div> <!-- ./curs-item thumbnail -->
-                </div> <!-- ./col-xs-12 col-sm-4 -->
-                <div class="col-xs-12 col-sm-4">
-                    <div class="curs-item thumbnail">
-                        <div class="title">
-                            <a href="#"><i class="fa fa-file-text-o"></i>Algebra II</a>
-                        </div> <!-- ./title -->
-                        <div class="description">
-                            <p><b>Profesor(i)</b>: <a href="#">Ionescu Bobo</a></p>
-                            <div class="ratings">
-                                <div class="pull-right">10 ratings</div>
-                                <div>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </div>
-                            </div> <!-- ./ratings -->
-                        </div> <!-- ./description -->
-                    </div> <!-- ./curs-item thumbnail -->
-                </div> <!-- ./col-xs-12 col-sm-4 -->
-            </div> <!-- ./row -->
-
-            <div class="row">
-                <div class="col-xs-12 col-sm-4">
-                    <div class="curs-item thumbnail">
-                        <div class="title">
-                            <a href="#"><i class="fa fa-file-text-o"></i>Geometrie computationala</a>
-                        </div> <!-- ./title -->
-                        <div class="description">
-                            <p><b>Profesor(i)</b>: <a href="#">Ionescu Bobo</a>, <a href="#">Patrascu Mirel</a></p>
-                            <div class="ratings">
-                                <div class="pull-right">6 ratings</div>
-                                <div>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </div>
-                            </div> <!-- ./ratings -->
-                        </div> <!-- ./description -->
-                    </div> <!-- ./curs-item thumbnail -->
-                </div> <!-- ./col-xs-12 col-sm-4 -->
-                <div class="col-xs-12 col-sm-4">
-                    <div class="curs-item thumbnail">
-                        <div class="title">
-                            <a href="#"><i class="fa fa-file-text-o"></i>Logica matematica</a>
-                        </div> <!-- ./title -->
-                        <div class="description">
-                            <p><b>Profesor(i)</b>: <a href="#">Ionescu Bobo</a>, <a href="#">Patrascu Mirel</a></p>
-                            <div class="ratings">
-                                <div class="pull-right">3 ratings</div>
-                                <div>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </div>
-                            </div> <!-- ./ratings -->
-                        </div> <!-- ./description -->
-                    </div> <!-- ./curs-item thumbnail -->
-                </div> <!-- ./col-xs-12 col-sm-4 -->
-                <div class="col-xs-12 col-sm-4">
-                    <div class="curs-item thumbnail">
-                        <div class="title">
-                            <a href="#"><i class="fa fa-file-text-o"></i>Programare avansata obiect</a>
-                        </div> <!-- ./title -->
-                        <div class="description">
-                            <p><b>Profesor(i)</b>: <a href="#">Ionescu Bobo</a></p>
-                            <div class="ratings">
-                                <div class="pull-right">10 ratings</div>
-                                <div>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </div>
-                            </div> <!-- ./ratings -->
-                        </div> <!-- ./description -->
-                    </div> <!-- ./curs-item thumbnail -->
-                </div> <!-- ./col-xs-12 col-sm-4 -->
-            </div> <!-- ./row -->
+                {% endfor %}
+            </div>
 
             <div class="row margin-top">
                 <h2 class="col-xs-12">Profesori</h2>
@@ -169,69 +68,9 @@
                                 <td>{{ forloop.counter }}</td>
                                 <td>{{ teacher.name }}</td>
                                 <td>{{ teacher.courses }}</td>
-                                <td>{% get_stars 5 %}</td>
+                                <td>{% get_stars teacher.rating %}</td>
                             </tr>
                         {% endfor %}
-                            <tr>
-                                <td>1</td>
-                                <td>Popescu Vlad</td>
-                                <td>Programare logica, Curs 2, Curs 3</td>
-                                <td>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Popescu Vlad</td>
-                                <td>Programare logica, Curs 2, Curs 3</td>
-                                <td>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Popescu Vlad</td>
-                                <td>Programare logica, Curs 2, Curs 3</td>
-                                <td>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Popescu Vlad</td>
-                                <td>Programare logica, Curs 2, Curs 3</td>
-                                <td>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>etc</td>
-                                <td>etc</td>
-                                <td>etc</td>
-                                <td>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                 </div> <!-- ./table-responsive -->
