@@ -7,6 +7,9 @@ from .constants import MIN_RATING_STAR_VALUE, MAX_RATING_STAR_VALUE
 class Teacher(models.Model):
     name = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.name
+
 
 class Course(models.Model):
     name = models.CharField(max_length=200)
@@ -23,9 +26,15 @@ class Material(models.Model):
     course = models.ForeignKey(Course)
     name = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.name
+
 
 class Rating(models.Model):
     grade = models.IntegerField(validators=[
         MinValueValidator(MIN_RATING_STAR_VALUE),
         MaxValueValidator(MAX_RATING_STAR_VALUE)])
     course = models.ForeignKey(Material)
+
+    def __str__(self):
+        return self.course.name + ' - ' + self.grade
