@@ -3,7 +3,7 @@ from statistics import mean
 from django.http import HttpResponse
 from django.shortcuts import render
 
-from .models import Course, Teacher
+from .models import Course, Teacher, Rating
 
 
 def index(request):
@@ -18,12 +18,23 @@ def index(request):
         teacher_context = {
             'name': teacher.name,
             'courses': ', '.join(courses),
-            'rating': int(mean(ratings)) if len(ratings) else 3
+            'rating': int(mean(ratings)) if len(ratings) else 3,
         }
         teachers.append(teacher_context)
-    print(teachers)
+
+    courses = []
+    for course in Course.objects.all()[:3]:
+        ratings = [x.grade for x in course.rating_set.all()]
+        print(course.rating_set.all())
+        course_context = {
+            'name': course.name,
+            'teacher': course.teacher.name,
+            'rating': int(mean(ratings)) if len(ratings) else 3,
+            'rating_count': course.rating_set.count()
+        }
+        courses.append(course_context)
 
     return render(request, 'teme/index.html', {
-        'courses': Course.objects.all(),
+        'courses': courses,
         'teachers': teachers,
     })
