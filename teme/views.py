@@ -23,7 +23,7 @@ def index(request):
         teachers.append(teacher_context)
 
     courses = []
-    for course in Course.objects.all()[:3]:
+    for course in Course.objects.all()[:6]:
         ratings = [x.grade for x in course.rating_set.all()]
         print(course.rating_set.all())
         course_context = {
