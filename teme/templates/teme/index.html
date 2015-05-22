@@ -169,7 +169,7 @@
                                 <td>{{ forloop.counter }}</td>
                                 <td>{{ teacher.name }}</td>
                                 <td>{{ teacher.courses }}</td>
-                                <td>{% get_stars 5 %}</td>
+                                <td>{% get_stars teacher.rating %}</td>
                             </tr>
                         {% endfor %}
                         </tbody>
