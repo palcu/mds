@@ -68,7 +68,7 @@ Vagrant.configure(2) do |config|
     sudo apt-get update
     sudo apt-get install -y python3-pip
     sudo pip3 install -r /vagrant/requirements-dev.txt
-    . /vagrant/manage.py syncdb
-    . /vagrant/manage.py populatedata
+    python3 /vagrant/manage.py syncdb
+    python3 /vagrant/manage.py populatedata
   SHELL
 end
