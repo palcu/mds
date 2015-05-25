@@ -64,3 +64,4 @@ proiectmds/local_settings.py
 
 # Shit
 staticfiles/
+.vagrant/
