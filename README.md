@@ -3,6 +3,8 @@
 ```
 # Get dependencies
 pip install -r requirements.txt
+# Configure database
+./manage.py syncdb
 # Make a superuser
 ./manage.py createsuperuser
 # Start the server
