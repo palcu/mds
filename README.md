@@ -14,7 +14,7 @@ cd /vagrant
 ./manage.py runserver 0.0.0.0:8000
 ```
 
-Go to http://localhost:8889
+Go to [http://localhost:8889](http://localhost:8889).
 
 ## Production
 
