@@ -8,7 +8,7 @@ sudo pip3 install -r requirements-dev.txt
 # Make a superuser
 ./manage.py createsuperuser
 # Start the server
-./manage.py runserver
+./manage.py runserver 0.0.0.0:8000
 ```
 
 # Production
