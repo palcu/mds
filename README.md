@@ -1,17 +1,22 @@
 # teme
 
+## Provisioning
+
+Using [Vagrant](https://www.vagrantup.com) like a boss.
+
 ```
-# Get dependencies
-sudo pip3 install -r requirements-dev.txt
-# Configure database
-./manage.py syncdb
+vagrant up
+vagrant ssh
+cd /vagrant
 # Make a superuser
 ./manage.py createsuperuser
 # Start the server
 ./manage.py runserver 0.0.0.0:8000
 ```
 
-# Production
+Go to http://localhost:8889
+
+## Production
 
 http://salty-stream-1920.herokuapp.com/
 
