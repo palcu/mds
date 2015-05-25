@@ -2,7 +2,7 @@
 
 ```
 # Get dependencies
-pip3 install -r requirements-dev.txt
+sudo pip3 install -r requirements-dev.txt
 # Configure database
 ./manage.py syncdb
 # Make a superuser
