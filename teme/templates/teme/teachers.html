@@ -22,33 +22,8 @@
 <div class="container">
     <div class="row">
         <div id="content" class="col-md-9">
-            <div class="row">
-                <h2 class="col-xs-12">Cursuri</h2>
-                <p class="col-xs-12">Pentru a vizualiza lista cu toate cursurile, mergeti la pagina <a href="/courses">cursuri</a>.</p>
-            </div>
-
-            <div class="row">
-                {% for course in courses %}
-                <div class="col-xs-12 col-sm-4">
-                    <div class="curs-item thumbnail">
-                        <div class="title">
-                            <a href="/teachers"><i class="fa fa-file-text-o"></i>{{ course.name }}</a>
-                        </div> <!-- ./title -->
-                        <div class="description">
-                            <p><b>Profesor</b>: {{ course.teacher }}</p>
-                            <div class="ratings">
-                                <div class="pull-right">{{ course.rating_count }} ratings</div>
-                                {% get_stars course.rating %}
-                            </div> <!-- ./ratings -->
-                        </div> <!-- ./description -->
-                    </div> <!-- ./curs-item thumbnail -->
-                </div> <!-- ./col-xs-12 col-sm-4 -->
-                {% endfor %}
-            </div>
-
             <div class="row margin-top">
                 <h2 class="col-xs-12">Profesori</h2>
-                <p class="col-xs-12">Pentru a vizualiza lista cu toti profesorii, mergeti la pagina <a href="#">profesori</a>.</p>
             </div>
 
             <div class="row">
